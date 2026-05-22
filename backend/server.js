@@ -14,7 +14,7 @@ import paymentRoutes from './routes/paymentRoutes.js';
 import connectDB from './config/db.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
-import path from 'path';
+
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -41,19 +41,21 @@ app.use('/api/v1/orders', orderRoutes);
 app.use('/api/v1/upload', uploadRoutes);
 app.use('/api/v1/payment', paymentRoutes);
 //-------------------------------------
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '/frontend/build')));
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, '/frontend/build')));
 
-  //any app route that is not api will redirected to index.html
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
-  });
-} else {
-  app.get('/', (req, res) => {
-    res.send('Hello, World!');
-  });
-}
-
+//   //any app route that is not api will redirected to index.html
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+//   });
+// } else {
+//   app.get('/', (req, res) => {
+//     res.send('Hello, World!');
+//   });
+// }
+app.get('/', (req, res) => {
+  res.send('Backend API Running...');
+});
 //-------------------------------------
 app.use(notFound);
 app.use(errorHandler);
