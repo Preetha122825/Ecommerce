@@ -5,11 +5,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useLoginMutation } from '../../slices/usersApiSlice';
 import { setCredentials } from '../../slices/authSlice';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import FormContainer from '../../components/FormContainer';
 import Meta from '../../components/Meta';
 import Footer from '../../components/Footer';
-import Loader from '../../components/Loader';
+// import Loader from '../../components/Loader';
 
 const AdminLoginPage = () => {
   const [email, setEmail] = useState('');

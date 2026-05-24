@@ -42,7 +42,7 @@ const ProductPage = () => {
   const [createProductReview, { isLoading: isCreateProductReviewLoading }] =
     useCreateProductReviewMutation();
 
-  const navigate = useNavigate();
+  
   const dispatch = useDispatch();
 
 const addToCartHandler = () => {
