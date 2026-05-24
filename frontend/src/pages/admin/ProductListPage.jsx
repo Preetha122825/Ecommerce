@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Table, Button, Row, Col } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { toast } from 'react-toastify';
-import { FaRupeeSign, FaTrash, FaEdit } from 'react-icons/fa';
+import { FaTrash, FaEdit } from 'react-icons/fa';
 import { useGetProductsQuery } from '../../slices/productsApiSlice';
 import { useDeleteProductMutation } from '../../slices/productsApiSlice';
 import Loader from '../../components/Loader';

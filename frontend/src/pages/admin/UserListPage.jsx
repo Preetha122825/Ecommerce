@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Button, Table } from 'react-bootstrap';
-import { FaCheck, FaTrash, FaXmark } from 'react-icons/fa6';
+import {  FaTrash } from 'react-icons/fa6';
 import { LinkContainer } from 'react-router-bootstrap';
 import { FaEdit } from 'react-icons/fa';
 import {
